@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PoolTable — PTBL | SpyCrypto</title>
+<meta name="description" content="PoolTable (PTBL): SpyCrypto-operated Cardano stake pool. BREAK THE BLOCK.">
+<style>
+  :root{
+    --blue:#1da7fa; --blue-2:#0af; --ink:#0c1220; --felt:#0f7a3d; --wood:#6b4a2b;
+    --silver:#cfd6e0; --chrome:#e8edf3;
+  }
+  *{margin:0;box-sizing:border-box}
+  body{
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    color:#eef2f7; background:
+      radial-gradient(1200px 600px at 20% -10%, #0e2a4a 0%, transparent 60%),
+      linear-gradient(180deg,#0a1425 0%,#050b14 100%);
+    min-height:100vh; display:flex; flex-direction:column; align-items:center;
+    justify-content:center; text-align:center; padding:2rem 1.5rem;
+  }
+  .mark{width:86px;height:86px;margin:0 auto 1.4rem}
+  .mark svg{width:100%;height:100%}
+  .ptbl{
+    font-weight:800;font-size:clamp(3rem,11vw,6rem);line-height:.95;letter-spacing:.04em;
+    background:linear-gradient(180deg,#ffffff,#cfd6e0 45%,#7f8a9b 90%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    text-shadow:0 6px 24px rgba(29,167,250,.18);
+  }
+  .word{font-weight:300;letter-spacing:.62em;font-size:clamp(1rem,3.4vw,1.5rem);color:#fff;text-indent:.62em;margin-top:.6rem}
+  .tagline{margin:1.6rem 0;color:var(--blue-2);font-weight:600;letter-spacing:.18em;font-size:clamp(.8rem,2.6vw,1rem)}
+  .tagline::before,.tagline::after{content:"";display:inline-block;width:2.2rem;height:2px;background:var(--blue-2);vertical-align:middle;margin:0 .7rem}
+  .rack{display:flex;gap:3px;justify-content:center;align-items:flex-end;height:22px;margin-top:2.2rem}
+  .ball{width:14px;height:14px;border-radius:50%;box-shadow:inset -2px -2px 3px rgba(0,0,0,.5)}
+  .b1{background:#f5c518}.b2{background:var(--blue)}.b3{background:#e03e3e}.b4{background:#7b4fd8}
+  .b5{background:#f28c28}.b6{background:#22a06b}.b8{background:#111;background-image:radial-gradient(circle at 35% 30%,#333,#000 70%)}
+  .spy{margin-top:2.6rem;color:#cdd6e6;font-weight:300;letter-spacing:.35em;font-size:.8rem}
+  .spy span{color:var(--blue-2)}
+  .meta{margin-top:3rem;font-size:.78rem;color:#63708a;letter-spacing:.05em}
+  .meta code{color:#93a2bd}
+</style>
+</head>
+<body>
+
+  <div class="mark" aria-hidden="true">
+    <!-- PoolTable starburst/network mark — replace with official logo asset when provided -->
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#1da7fa" stroke-width="2.5" stroke-linecap="round">
+        <path d="M50 50 L18 30 M50 50 L82 30 M50 50 L38 82 M50 50 L62 82"/>
+        <path d="M18 30 L82 30 M18 30 L38 82 M82 30 L62 82 M38 82 L62 82"/>
+      </g>
+      <g fill="#1da7fa">
+        <circle cx="50" cy="50" r="6"/>
+        <circle cx="18" cy="30" r="4"/>
+        <circle cx="82" cy="30" r="4"/>
+        <circle cx="38" cy="82" r="4"/>
+        <circle cx="62" cy="82" r="4"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="ptbl">PTBL</div>
+  <div class="word">POOLTABLE</div>
+  <div class="tagline">BREAK THE BLOCK.</div>
+
+  <div class="rack" aria-hidden="true">
+    <div class="ball b8"></div>
+    <div class="ball b1"></div>
+    <div class="ball b2"></div>
+    <div class="ball b3"></div>
+    <div class="ball b4"></div>
+    <div class="ball b5"></div>
+    <div class="ball b6"></div>
+  </div>
+
+  <div class="spy">SPY<span>CRYPTO</span></div>
+
+  <div class="meta">
+    Public Cardano stake pool &middot; Ticker <code>PTBL</code> &middot; Mainnet
+  </div>
+
+</body>
+</html>
