@@ -19,18 +19,41 @@
       radial-gradient(900px 500px at 82% 108%, #0e3a55 0%, transparent 55%),
       linear-gradient(180deg,#0b1224 0%,#060a14 100%);
     min-height:100vh; display:flex; flex-direction:column; align-items:center;
-    justify-content:center; text-align:center; padding:3rem 1.5rem;
+    justify-content:flex-start; text-align:center; padding:3.4rem 1.5rem;
   }
   .logo{width:min(620px,94vw); max-width:620px}
   .logo svg{width:100%;height:auto;display:block}
-  .rack{display:flex;gap:3px;justify-content:center;align-items:flex-end;height:20px;margin-top:2.6rem}
+  .rack{display:flex;gap:3px;justify-content:center;align-items:flex-end;height:20px;margin-top:2.2rem}
   .ball{width:13px;height:13px;border-radius:50%;box-shadow:inset -2px -2px 3px rgba(0,0,0,.5)}
   .b1{background:#f5c518}.b2{background:var(--blue)}.b3{background:#e03e3e}.b4{background:#7b4fd8}
   .b5{background:#f28c28}.b6{background:#22a06b}.b8{background:#111;background-image:radial-gradient(circle at 35% 30%,#333,#000 70%)}
-  .spy{margin-top:1.8rem;color:#cdd6e6;font-weight:300;letter-spacing:.35em;font-size:.78rem}
+  .spy{margin-top:1.6rem;color:#cdd6e6;font-weight:700;letter-spacing:.35em;font-size:.78rem;font-family:"Arial Narrow",Arial,sans-serif}
   .spy span{color:var(--stag)}
-  .meta{margin-top:1.4rem;font-size:.76rem;color:#63708a;letter-spacing:.05em;font-family:system-ui,-apple-system,sans-serif}
-  .meta code{color:#93a2bd}
+
+  /* content sections below the hero */
+  .content{width:min(760px,94vw);margin-top:3.2rem;text-align:left;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .content h2{
+    font-family:"Arial Black","Arial Narrow",Arial,sans-serif;font-size:1.05rem;color:#fff;
+    letter-spacing:.22em;text-transform:uppercase;margin:2.2rem 0 1rem;
+    display:flex;align-items:center;gap:.8rem;
+  }
+  .content h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(41,182,246,.4),transparent)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+  .card{background:rgba(18,32,58,.5);border:1px solid rgba(59,110,169,.35);border-radius:12px;padding:16px 18px}
+  .card .k{font-size:.68rem;letter-spacing:.18em;color:#7d8fb0;text-transform:uppercase;margin-bottom:6px}
+  .card .v{font-size:1.35rem;font-weight:800;color:#fff;font-family:"Arial Narrow",Arial,sans-serif}
+  .card .v .num{color:var(--stag)}
+  .card .d{font-size:.8rem;color:#a7b5cc;margin-top:6px;line-height:1.5}
+  ol.steps{margin:0;padding:0 0 0 1.2rem;display:flex;flex-direction:column;gap:10px;color:#c6d2e4;font-size:.9rem;line-height:1.55}
+  ol.steps li::marker{color:var(--stag);font-weight:700}
+  .links{display:flex;flex-wrap:wrap;gap:10px}
+  a.pill{
+    display:inline-block;padding:9px 16px;border:1px solid rgba(41,182,246,.45);border-radius:999px;
+    color:#eaf6ff;text-decoration:none;font-size:.86rem;font-weight:600;transition:background .18s,color .18s;
+  }
+  a.pill:hover{background:var(--stag);color:#061018}
+  .note{margin-top:2rem;font-size:.78rem;color:#63708a;line-height:1.6}
+  .note code{color:#93a2bd}
 </style>
 </head>
 <body>
@@ -105,8 +128,42 @@
 
   <div class="spy">SPY<span>CRYPTO</span></div>
 
-  <div class="meta">
-    Public Cardano stake pool &middot; Ticker <code>PTBL</code> &middot; Mainnet
+  <div class="content">
+
+    <!-- POOL PARAMETERS -->
+    <h2>Pool at a glance</h2>
+    <div class="cards">
+      <div class="card"><div class="k">Fixed fee</div><div class="v">340 <span class="num">₳</span></div><div class="d">Protocol minimum — low barrier for every delegator.</div></div>
+      <div class="card"><div class="k">Margin</div><div class="v"><span class="num">0%</span></div><div class="d">No margin while we build stake. Rewards go to pool &amp; delegators.</div></div>
+      <div class="card"><div class="k">Pledge (target)</div><div class="v"><span class="num">50,000 ₳</span></div><div class="d">Operator stake, grown transparently along the way.</div></div>
+      <div class="card"><div class="k">Env</div><div class="v"><span class="num">Mainnet</span></div><div class="d">Independent room — operated by SpyCrypto, US-based.</div></div>
+    </div>
+
+    <!-- DELEGATION -->
+    <h2>Delegate to PoolTable</h2>
+    <ol class="steps">
+      <li><strong>Get a wallet</strong> — Eternl, Yoroi or Typhon store your ADA and let you stake.</li>
+      <li><strong>Select PoolTable (PTBL)</strong> — search the pool by ticker <code>PTBL</code> in your wallet, or paste the pool ID (shown here the moment we&rsquo;re live on-chain).</li>
+      <li><strong>Confirm &amp; activate</strong> — your stake shows as delegating within 1&ndash;2 epochs; rewards appear after ~2 full epochs. No lock-in: undelegate or switch anytime.</li>
+    </ol>
+
+    <!-- LINKS -->
+    <h2>Check the pool</h2>
+    <div class="links">
+      <a class="pill" href="https://pool.pm/" target="_blank" rel="noopener">Live metrics · pool.pm</a>
+      <a class="pill" href="https://cardanoscan.io/pools" target="_blank" rel="noopener">Cardanoscan</a>
+      <a class="pill" href="https://cardano.org/stake-pool-operation" target="_blank" rel="noopener">Delegating ADA (official guide)</a>
+      <a class="pill" href="https://eternl.io" target="_blank" rel="noopener">Eternl wallet</a>
+      <a class="pill" href="https://yoroi-wallet.com" target="_blank" rel="noopener">Yoroi wallet</a>
+      <a class="pill" href="https://discord.com/invite/cardano" target="_blank" rel="noopener">Operator on Cardano Discord</a>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="note">
+      Public Cardano stake pool &middot; Ticker <code>PTBL</code> &middot; Mainnet &middot; Operated by <strong>SpyCrypto</strong> &middot; BREAK THE BLOCK.
+      <br>Independent, community-first infrastructure. No guaranteed rewards &mdash; staking is always your choice.
+    </div>
+
   </div>
 
 </body>
