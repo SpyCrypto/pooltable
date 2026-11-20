@@ -38,12 +38,33 @@
     display:flex;align-items:center;gap:.8rem;
   }
   .content h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(41,182,246,.4),transparent)}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
-  .card{background:rgba(18,32,58,.5);border:1px solid rgba(59,110,169,.35);border-radius:12px;padding:16px 18px}
-  .card .k{font-size:.68rem;letter-spacing:.18em;color:#7d8fb0;text-transform:uppercase;margin-bottom:6px}
-  .card .v{font-size:1.35rem;font-weight:800;color:#fff;font-family:"Arial Narrow",Arial,sans-serif}
-  .card .v .num{color:var(--stag)}
-  .card .d{font-size:.8rem;color:#a7b5cc;margin-top:6px;line-height:1.5}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:26px;justify-items:center}
+  .card{
+    width:200px;height:200px;border-radius:50%;
+    position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:34px 20px;
+    color:#0a1220;
+  }
+  /* cue-ball sphere gradient — white/cream solid ball */
+  .card::before{
+    content:"";position:absolute;inset:0;border-radius:50%;z-index:0;
+    background:
+      radial-gradient(circle at 30% 24%, rgba(255,255,255,.98) 0%, rgba(244,247,250,.9) 26%, rgba(206,213,222,.85) 60%, rgba(150,160,173,.9) 88%, rgba(120,130,145,1) 100%);
+    box-shadow:
+      inset -14px -18px 34px rgba(90,100,115,.55),
+      inset 10px 12px 22px rgba(255,255,255,.7),
+      0 14px 26px rgba(0,0,0,.55);
+  }
+  /* faint number-ring */
+  .card::after{
+    content:"";position:absolute;inset:12px;border-radius:50%;z-index:1;
+    border:1.5px solid rgba(8,16,28,.22);
+  }
+  .card>*{position:relative;z-index:2}
+  .card .k{font-size:.62rem;letter-spacing:.18em;color:#2a3644;text-transform:uppercase;margin-bottom:7px;font-family:"Arial",system-ui,sans-serif;font-weight:700}
+  .card .v{font-size:1.22rem;font-weight:900;color:#0b1626;font-family:"Arial Narrow","Arial",sans-serif;line-height:1.08}
+  .card .v .num{color:#0e5aa8}
+  .card .d{font-size:.72rem;color:#33414f;margin-top:8px;line-height:1.42;font-family:system-ui,-apple-system,sans-serif;max-width:150px}
   ol.steps{margin:0;padding:0 0 0 1.2rem;display:flex;flex-direction:column;gap:10px;color:#c6d2e4;font-size:.9rem;line-height:1.55}
   ol.steps li::marker{color:var(--stag);font-weight:700}
   .links{display:flex;flex-wrap:wrap;gap:10px}
