@@ -192,48 +192,41 @@
       <rect x="0" y="8" width="460" height="222" rx="14" fill="#0f4c3a"/>
       <rect x="0" y="8" width="460" height="222" rx="14" fill="url(#ballGrad)" opacity="0.18"/>
 
-      <!-- TABLE: full 15-ball rack (PTBL 8-ball center), cue ball, cue stick -->
+      <!-- TABLE: clean 15-ball rack (PTBL 8-ball front-center), cue ball, cue stick -->
       <g transform="translate(46,44)">
-        <!-- proper honeycomb rack: rows up to 5, 26px touching, PTBL 8-ball center-front -->
-        <!-- row 1 (front, apex) -->
-        <circle cx="182" cy="180" r="15" fill="#ffeb3b"/>
-        <circle cx="230" cy="180" r="15" fill="#181818"/>
-        <circle cx="278" cy="180" r="15" fill="#b71c1c"/>
-        <!-- row 2 -->
-        <circle cx="243" cy="154" r="15" fill="#f08c00"/>
-        <circle cx="217" cy="154" r="15" fill="#2962ff"/>
-        <!-- row 3 -->
-        <circle cx="269" cy="128" r="15" fill="#2e7d32"/>
-        <circle cx="230" cy="128" r="15" fill="#d50000"/>
-        <circle cx="191" cy="128" r="15" fill="#8e24aa"/>
-        <!-- row 4 (widest) -->
-        <circle cx="321" cy="102" r="15" fill="#ffeb3b"/>
-        <circle cx="295" cy="102" r="15" fill="#b71c1c"/>
-        <circle cx="269" cy="102" r="15" fill="#2962ff"/>
-        <circle cx="243" cy="102" r="15" fill="#8e24aa"/>
-        <circle cx="217" cy="102" r="15" fill="#f08c00"/>
-        <circle cx="191" cy="102" r="15" fill="#2e7d32"/>
-        <circle cx="165" cy="102" r="15" fill="#d84315"/>
-        <!-- gloss highlight over every ball -->
-        <g fill="url(#ballGrad)" stroke="rgba(255,255,255,.15)">
-          <circle cx="182" cy="180" r="15"/><circle cx="230" cy="180" r="15"/><circle cx="278" cy="180" r="15"/>
-          <circle cx="217" cy="154" r="15"/><circle cx="243" cy="154" r="15"/>
-          <circle cx="191" cy="128" r="15"/><circle cx="230" cy="128" r="15"/><circle cx="269" cy="128" r="15"/>
-          <circle cx="165" cy="102" r="15"/><circle cx="191" cy="102" r="15"/><circle cx="217" cy="102" r="15"/><circle cx="243" cy="102" r="15"/><circle cx="269" cy="102" r="15"/><circle cx="295" cy="102" r="15"/><circle cx="321" cy="102" r="15"/>
-        </g>
-        <!-- PTBL on the black 8-ball (layered above gloss) -->
-        <text x="230" y="185" text-anchor="middle" font-family="Arial" font-weight="900" font-size="13" fill="#fff">PTBL</text>
+        <!-- tight standard rack: 5 rows, 30px pitch, RTBL ball = front-center apex -->
+        <!-- row1 (apex) -->
+        <circle cx="230" cy="184" r="15" fill="black"/>
+        <text x="230" y="189" text-anchor="middle" font-family="Arial" font-weight="900" font-size="12" fill="#fff">PTBL</text>
+        <!-- row2 -->
+        <circle cx="200" cy="158" r="15" fill="#ffeb3b"/>
+        <circle cx="260" cy="158" r="15" fill="#ff6f00"/>
+        <!-- row3 -->
+        <circle cx="170" cy="132" r="15" fill="#2962ff"/>
+        <circle cx="230" cy="132" r="15" fill="#e53935"/>
+        <circle cx="290" cy="132" r="15" fill="#4caf50"/>
+        <!-- row4 -->
+        <circle cx="140" cy="106" r="15" fill="#8e24aa"/>
+        <circle cx="200" cy="106" r="15" fill="#00897b"/>
+        <circle cx="260" cy="106" r="15" fill="#c62828"/>
+        <circle cx="320" cy="106" r="15" fill="#00acc1"/>
+        <!-- row5 (back) -->
+        <circle cx="110" cy="80" r="15" fill="#f9a825"/>
+        <circle cx="170" cy="80" r="15" fill="#1565c0"/>
+        <circle cx="230" cy="80" r="15" fill="#5e35b1"/>
+        <circle cx="290" cy="80" r="15" fill="#e53935"/>
+        <circle cx="350" cy="80" r="15" fill="#2e7d32"/>
 
-        <!-- cue ball (white), clear of the rack -->
-        <circle cx="118" cy="202" r="15" fill="#fbfbfb"/>
-        <circle cx="118" cy="202" r="15" fill="url(#ballGrad)" opacity=".16"/>
+        <!-- cue ball: lower-left, clear of the rack -->
+        <circle cx="120" cy="196" r="15" fill="#f5f7fa"/>
+        <circle cx="120" cy="196" r="15" fill="url(#ballGrad)" opacity=".18"/>
 
-        <!-- cue stick: from lower-right rail, angled toward the cue ball -->
-        <g transform="rotate(6 300 226)">
-          <rect x="60"  y="224" width="160" height="6" rx="3" fill="url(#shaftGrad)"/>
-          <rect x="204" y="223" width="34" height="8" rx="2" fill="#7a3e2b"/>
-          <rect x="232" y="223" width="14" height="8" rx="2" fill="url(#woodGrad)"/>
-          <rect x="244" y="224" width="6" height="6" rx="2" fill="url(#tipGrad)"/>
+        <!-- cue stick: near-horizontal from the left rail along the bottom, tip toward cue ball -->
+        <g transform="rotate(4 52 226)">
+          <rect x="0"   y="224" width="150" height="6" rx="3" fill="url(#shaftGrad)"/>
+          <rect x="144" y="223" width="26" height="8" rx="2" fill="#7a3e2b"/>
+          <rect x="166" y="223" width="12" height="8" rx="2" fill="url(#woodGrad)"/>
+          <rect x="175" y="224" width="6" height="6" rx="2" fill="url(#tipGrad)"/>
         </g>
       </g>
     </svg>
