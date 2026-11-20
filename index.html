@@ -5,11 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PoolTable — PTBL | Spy Brands</title>
 <meta name="description" content="PoolTable (PTBL): Spy Brands-operated Cardano stake pool. BREAK THE BLOCK.">
+<link rel="icon" type="image/png" href="favicon.png">
 <style>
   :root{
     --blue:#1da7fa; --blue-2:#0af; --stag:#29b6f6;
-    --ink:#0c1220; --felt:#0f7a3d; --wood:#6b4a2b;
+    --ink:#0c1220; --felt:#0f4c3a; --wood:#8d6e63; --wooddark:#5d4037;
     --silver:#cfd6e0; --chrome:#e8edf3;
+    --b1:#ffeb3b; --b2:#2962ff; --b3:#d50000; --b4:#aa00ff;
+    --b5:#ff6d00; --b6:#00c853; --b7:#b71c1c; --b8:#181818;
   }
   *{margin:0;box-sizing:border-box}
   body{
@@ -23,7 +26,8 @@
   }
   .logo{width:min(620px,94vw); max-width:620px}
   .logo svg{width:100%;height:auto;display:block}
-  .rack{display:flex;gap:3px;justify-content:center;align-items:flex-end;height:20px;margin-top:2.2rem}
+  .table{width:min(420px,92vw);margin:1.6rem auto 0}
+  .table svg{width:100%;height:auto;display:block;filter:drop-shadow(0 16px 26px rgba(0,0,0,.5))}
   .ball{width:13px;height:13px;border-radius:50%;box-shadow:inset -2px -2px 3px rgba(0,0,0,.5)}
   .b1{background:#f5c518}.b2{background:var(--blue)}.b3{background:#e03e3e}.b4{background:#7b4fd8}
   .b5{background:#f28c28}.b6{background:#22a06b}.b8{background:#111;background-image:radial-gradient(circle at 35% 30%,#333,#000 70%)}
@@ -160,14 +164,83 @@
     </svg>
   </div>
 
-  <div class="rack" aria-hidden="true">
-    <div class="ball b8"></div>
-    <div class="ball b1"></div>
-    <div class="ball b2"></div>
-    <div class="ball b3"></div>
-    <div class="ball b4"></div>
-    <div class="ball b5"></div>
-    <div class="ball b6"></div>
+  <div class="table" role="img" aria-label="PoolTable rack of billiard balls and cue stick">
+    <svg viewBox="0 0 460 250" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="ballGrad" cx="0.32" cy="0.26" r="0.95">
+          <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
+          <stop offset="0.18" stop-color="#ffffff" stop-opacity="0.28"/>
+          <stop offset="0.6" stop-color="#000000" stop-opacity="0.16"/>
+          <stop offset="1" stop-color="#000000" stop-opacity="0.42"/>
+        </radialGradient>
+        <linearGradient id="woodGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#a1876b"/>
+          <stop offset="0.4" stop-color="#8d6e63"/>
+          <stop offset="1" stop-color="#5d4037"/>
+        </linearGradient>
+        <linearGradient id="shaftGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#d9c9a3"/>
+          <stop offset="1" stop-color="#b8a27c"/>
+        </linearGradient>
+        <linearGradient id="tipGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#2f7fd6"/>
+          <stop offset="1" stop-color="#1d4f8f"/>
+        </linearGradient>
+      </defs>
+
+      <!-- felt -->
+      <rect x="0" y="8" width="460" height="222" rx="14" fill="#0f4c3a"/>
+      <rect x="0" y="8" width="460" height="222" rx="14" fill="url(#ballGrad)" opacity="0.18"/>
+
+      <!-- TABLE: full 15-ball rack (PTBL 8-ball center), cue ball, cue stick -->
+      <g transform="translate(46,44)">
+        <!-- rack triangle balls; stripes with white equator -->
+        <!-- row 1 (front, 1 ball + 2): -->
+        <circle cx="184" cy="166" r="15" fill="#ffeb3b"/>
+        <circle cx="230" cy="166" r="15" fill="#181818"/>
+        <text x="230" y="171" text-anchor="middle" font-family="Arial" font-weight="900" font-size="13" fill="#fff">PTBL</text>
+        <circle cx="276" cy="166" r="15" fill="#b71c1c"/>
+
+        <!-- row 2 (3 balls) -->
+        <circle cx="205" cy="133" r="15" fill="#2962ff"/>
+        <circle cx="255" cy="133" r="15" fill="#f08c00"/>
+        <circle cx="230" cy="133" r="15" fill="#2e7d32"/>
+
+        <!-- row 3 (4 balls) -->
+        <circle cx="172" cy="100" r="15" fill="#d50000"/>
+        <circle cx="218" cy="100" r="15" fill="#8e24aa"/>
+        <circle cx="264" cy="100" r="15" fill="#d84315"/>
+        <circle cx="310" cy="100" r="15" fill="#2962ff"/>
+
+        <!-- row 4 (5 balls, stripes) -->
+        <circle cx="184" cy="67"  r="15" fill="#ffeb3b"/>
+        <circle cx="230" cy="67"  r="15" fill="#b71c1c"/>
+        <circle cx="276" cy="67"  r="15" fill="#2e7d32"/>
+        <circle cx="322" cy="67"  r="15" fill="#f08c00"/>
+        <circle cx="138" cy="67"  r="15" fill="#8e24aa"/>
+
+        <!-- gloss + rim over every rack ball -->
+        <g fill="url(#ballGrad)" stroke="rgba(255,255,255,.14)">
+          <circle cx="184" cy="166" r="15"/><circle cx="230" cy="166" r="15"/><circle cx="276" cy="166" r="15"/>
+          <circle cx="205" cy="133" r="15"/><circle cx="230" cy="133" r="15"/><circle cx="255" cy="133" r="15"/>
+          <circle cx="172" cy="100" r="15"/><circle cx="218" cy="100" r="15"/><circle cx="264" cy="100" r="15"/><circle cx="310" cy="100" r="15"/>
+          <circle cx="138" cy="67" r="15"/><circle cx="184" cy="67" r="15"/><circle cx="230" cy="67" r="15"/><circle cx="276" cy="67" r="15"/><circle cx="322" cy="67" r="15"/>
+        </g>
+        <text x="230" y="171" text-anchor="middle" font-family="Arial" font-weight="900" font-size="13" fill="#fff">PTBL</text>
+
+        <!-- cue ball (white, offset to the left) -->
+        <circle cx="110" cy="150" r="15" fill="#fbfbfb"/>
+        <circle cx="110" cy="150" r="15" fill="url(#ballGrad)" opacity=".16"/>
+
+        <!-- cue stick: aimed at the cue ball from lower-right rail -->
+        <g transform="rotate(14 250 226)">
+          <rect x="60"  y="224" width="150" height="6" rx="3" fill="url(#shaftGrad)"/>
+          <rect x="196" y="223" width="34" height="8" rx="2" fill="#7a3e2b"/>
+          <rect x="224" y="223" width="14" height="8" rx="2" fill="url(#woodGrad)"/>
+          <rect x="236" y="224" width="6" height="6" rx="2" fill="url(#tipGrad)"/>
+        </g>
+      </g>
+    </svg>
   </div>
 
   <div class="spy">SPY <span>BRANDS</span></div>
